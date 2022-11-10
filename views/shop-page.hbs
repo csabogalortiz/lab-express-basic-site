@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h1 class="fw-bold bg-light text-dark d-flex justify-content-center">Our Products!</h1>
+    <hr>
+
+    <div class="row">
+        {{#each products}}
+        <div class="col-6 d-flex align-items-center justify-content-center">
+            <div>
+                <h2 class="fs-3 fw-bold"> {{title}} </h2>
+                <p> The price is: <span class="text-success fw-bold"> ${{price}} </span> </p>
+            </div>
+        </div>
+        <div class="col-6 .mb-2">
+            <img src="{{thumbnail}}" class="rounded img-thumbnail .mb-2"" alt=" {{name}}">
+        </div>
+
+        {{discountPercentage}}
+        {{rating}}
+        {{stock}}
+        {{brand}}
+        {{category}}
+
+        {{!-- <li> {{thumbnail}} </li> --}}
+
+        {{/each}}
+    </div>
+
+    <a href="/" class="btn btn-dark">Back Home</a>
+</div>
